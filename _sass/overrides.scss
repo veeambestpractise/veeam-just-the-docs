@@ -75,7 +75,7 @@ a:not([class]) {
     height: 33px
   }
   
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: $content-width - 1) {
   img.veeam_logo_lp,
   img.veeam_logo_slogan_lp {
     position: static;
@@ -181,7 +181,7 @@ a:not([class]) {
     bottom: 0;
   }
   
-  @media screen and (max-width: 739px) {
+  @media screen and (max-width: $content-width - 1) {
     .c-hamburger {
       display: block;
       position: absolute;
