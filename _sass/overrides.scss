@@ -75,7 +75,7 @@ a:not([class]) {
     height: 33px
   }
   
-  @media screen and (max-width: 739px) {
+  @media screen and (max-width: 799px) {
   img.veeam_logo_lp,
   img.veeam_logo_slogan_lp {
     position: static;
@@ -200,3 +200,12 @@ a:not([class]) {
   }
   
   /*********************** hamburger - e ***************************/
+
+  // Updates for 0.2.7 - Stefan Zimmermann 09.04.2020
+
+  // Remove bottom border from navigation
+  .site-header {
+    @include mq(md) {      
+      border-bottom: none;
+    }
+  }
