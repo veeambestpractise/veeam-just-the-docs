@@ -35,8 +35,7 @@ function initNav() {
 
     mainNav.classList.toggle('nav-open');
     pageHeader.classList.toggle('nav-open');
-    navTrigger.classList.toggle('nav-open');
-    search.classList.toggle('nav-open');
+    navTrigger.classList.toggle('nav-open');   
     // navTrigger.innerText = textToggle;
     // navTrigger.setAttribute('data-text-toggle', text);
     // textToggle = text;
