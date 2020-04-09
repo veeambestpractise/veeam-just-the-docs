@@ -28,7 +28,7 @@ function initNav() {
   const pageHeader = document.querySelector('.js-page-header');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
 
-  jtd.addEvent(navTrigger, 'click', function(){
+  jtd.addEvent(navTrigger, 'click', function(e){
     e.preventDefault();
     // var text = navTrigger.innerText;
     // var textToggle = navTrigger.getAttribute('data-text-toggle');
