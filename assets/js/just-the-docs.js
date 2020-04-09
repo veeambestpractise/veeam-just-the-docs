@@ -28,17 +28,19 @@ function initNav() {
   const pageHeader = document.querySelector('.js-page-header');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
 
-  jtd.addEvent(navTrigger, 'click', function(e){
+  addEvent(navTrigger, 'click', function(){
     e.preventDefault();
-    var text = navTrigger.innerText;
-    var textToggle = navTrigger.getAttribute('data-text-toggle');
+    // var text = navTrigger.innerText;
+    // var textToggle = navTrigger.getAttribute('data-text-toggle');
 
     mainNav.classList.toggle('nav-open');
     pageHeader.classList.toggle('nav-open');
     navTrigger.classList.toggle('nav-open');
-    navTrigger.innerText = textToggle;
-    navTrigger.setAttribute('data-text-toggle', text);
-    textToggle = text;
+    search.classList.toggle('nav-open');
+    // navTrigger.innerText = textToggle;
+    // navTrigger.setAttribute('data-text-toggle', text);
+    // textToggle = text;
+    navTrigger.classList.toggle('c-hamburger-x');
   })
 }
 
