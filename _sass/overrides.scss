@@ -223,6 +223,8 @@ a:not([class]) {
 li.numbered-list-item::before {
   counter-increment: section;
 
+  position: absolute;
+
   content: counters(section,".") " ";
 
 }
