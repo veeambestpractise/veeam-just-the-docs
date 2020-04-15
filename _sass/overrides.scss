@@ -224,17 +224,17 @@ a:not([class]) {
   counter-increment: section;
   content: counters(section,".") " ";
 
-  position: absolute;
-  margin-left: -1em;
+  position: absolute;  
   margin-top: 4px;
   color: $nav-child-link-color;
 }
 
 .navigation-list-item.numbered-list-item::before {
   @extend %numbered-item-base;
+  margin-left: -1em;
 }
 
-.active .numbered-list-item::before {
+.active.numbered-list-item::before {
   font-weight: bold;
   color: white;
 }
