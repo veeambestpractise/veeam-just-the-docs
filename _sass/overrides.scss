@@ -220,7 +220,7 @@ a:not([class]) {
   counter-reset: section;
 }
 
-li.numbered-list-item::before {
+%numbered-item-base {
   counter-increment: section;
   content: counters(section,".") " ";
 
@@ -228,4 +228,23 @@ li.numbered-list-item::before {
   margin-left: -1em;
   margin-top: 4px;
   color: $nav-child-link-color;
+}
+
+.navigation-list-item.numbered-list-item::before {
+  @extend %numbered-item-base;
+}
+
+.active .numbered-list-item::before {
+  font-weight: bold;
+  color: white;
+}
+
+.navigation-list-child-list .navigation-item-list.numbered-list-item::before {
+  @extend %numbered-item-base;
+  margin-left: -2em;
+}
+
+.navigation-list-child-list .navigation-list-child-list .navigation-item-list.numbered-list-item::before {
+  @extend %numbered-item-base;
+  margin-left: -3em;
 }
