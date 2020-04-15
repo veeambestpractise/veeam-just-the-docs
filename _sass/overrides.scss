@@ -222,21 +222,10 @@ a:not([class]) {
 
 li.numbered-list-item::before {
   counter-increment: section;
-
-  position: absolute;
-
   content: counters(section,".") " ";
 
-}
-
-.nav-list-lvl-1 {  
-  counter-reset: counter-nav-lvl-1;
-}
-
-li.nav-list-item-numbered-1 {  
-  counter-increment: counter-nav-lvl-1;
-}
-
-li.nav-list-item-numbered-1::before {
-  content: counter(counter-nav-lvl-1) ". ";
+  position: absolute;
+  margin-left: -1em;
+  margin-top: 4px;
+  color: $nav-child-link-color;
 }
