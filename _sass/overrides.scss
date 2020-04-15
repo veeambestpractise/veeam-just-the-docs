@@ -212,6 +212,21 @@ a:not([class]) {
 
 // Updates for automated numbering in the navigation
 // Stefan Zimmermann, 15.04.2020
+.navigation-list {
+  counter-reset: section;
+}
+
+.navigation-list-child-list {
+  counter-reset: section;
+}
+
+li.numbered-list-item::before {
+  counter-increment: section;
+
+  content: counters(section,".") " ";
+
+}
+
 .nav-list-lvl-1 {  
   counter-reset: counter-nav-lvl-1;
 }
