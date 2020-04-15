@@ -216,7 +216,7 @@ a:not([class]) {
   counter-reset: counter-nav-lvl-1;
 }
 
-.nav-list-item-numbered-1 {  
+li.nav-list-item-numbered-1 {  
   counter-increment: counter-nav-lvl-1;
 }
 
