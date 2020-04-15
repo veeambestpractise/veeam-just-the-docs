@@ -199,13 +199,28 @@ a:not([class]) {
     }
   }
   
-  /*********************** hamburger - e ***************************/
+/*********************** hamburger - e ***************************/
 
-  // Updates for 0.2.7 - Stefan Zimmermann 09.04.2020
+// Updates for 0.2.7 - Stefan Zimmermann 09.04.2020
 
-  // Remove bottom border from navigation
-  .site-header {
-    @include mq(md) {      
-      border-bottom: none;
-    }
+// Remove bottom border from navigation
+.site-header {
+  @include mq(md) {      
+    border-bottom: none;
   }
+}
+
+// Updates for automated numbering in the navigation
+// Stefan Zimmermann, 15.04.2020
+.nav-list-lvl-1 {  
+  counter-reset: counter-nav-lvl-1;
+}
+
+.nav-list-item-numbered-1 {
+  list-style: decimal;
+  counter-increment: counter-nav-lvl-1;
+}
+
+li .nav-list-item-numbered-1::before {
+  content: counter(counter-nav-lvl-1) ". ";
+}
