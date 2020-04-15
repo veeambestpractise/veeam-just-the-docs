@@ -229,19 +229,30 @@ a:not([class]) {
   color: $nav-child-link-color;
 }
 
-.navigation-list > .numbered-list-item::before {
-  @extend %numbered-item-base;
-  margin-left: -1em;
+.navigation-list > .numbered-list-item {
+  padding-left: 1em;
+
+  &::before {
+    @extend %numbered-item-base;
+    margin-left: -1em;
+  }
 }
 
-.navigation-list > .navigation-list-item > .navigation-list-child-list > .numbered-list-item::before {
-  @extend %numbered-item-base;
-  margin-left: -2em;
+.navigation-list > .navigation-list-item > .navigation-list-child-list > .numbered-list-item {
+  padding-left: 2em;
+
+  &::before {
+    @extend %numbered-item-base;
+    margin-left: -2em;
+  }
 }
 
-.navigation-list > .navigation-list-item > .navigation-list-child-list > .navigation-list-item > .navigation-list-child-list > .numbered-list-item::before {
-  @extend %numbered-item-base;
-  margin-left: -3em;
+.navigation-list > .navigation-list-item > .navigation-list-child-list > .navigation-list-item > .navigation-list-child-list > .numbered-list-item {
+  padding-left: 3em;
+  &::before {
+    @extend %numbered-item-base;
+    margin-left: -3em;
+  }
 }
 
 .active.numbered-list-item::before {
