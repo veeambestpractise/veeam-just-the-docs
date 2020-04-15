@@ -234,12 +234,12 @@ a:not([class]) {
   margin-left: -1em;
 }
 
-.navigation-list > .navigation-list-child-list > .numbered-list-item::before {
+.navigation-list > .navigation-list-item > .navigation-list-child-list > .numbered-list-item::before {
   @extend %numbered-item-base;
   margin-left: -2em;
 }
 
-.navigation-list > .navigation-list-child-list > .navigation-list-child-list > .numbered-list-item::before {
+.navigation-list > .navigation-list-item > .navigation-list-child-list > .navigation-list-item > .navigation-list-child-list > .numbered-list-item::before {
   @extend %numbered-item-base;
   margin-left: -3em;
 }
