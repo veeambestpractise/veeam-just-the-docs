@@ -232,3 +232,18 @@ a:not([class]) {
   font-weight: bold;
   color: white;
 }
+
+// Overriding menu width and location, putting it all to the left
+// Stefan Zimmermann, 30.04.2020
+.side-bar {
+  @include mq(lg) {
+    width: $nav-width;
+    min-width: $nav-width;
+  }
+}
+
+.main-content {
+  @include mq(lg) {
+    margin-left: $nav-width;
+  }
+}
